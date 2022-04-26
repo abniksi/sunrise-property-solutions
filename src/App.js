@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import "tailwindcss/dist/base.css";
+import "styles/globalStyles.css";
+import React from "react";
+import { css } from "styled-components/macro"; //eslint-disable-line
 
-function App() {
+import ComponentRenderer from "ComponentRenderer.js";
+import MainLandingPage from "AgencyLandingPage";
+
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+export default function App() {
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Jacob Gilmore TEST
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/components/:type/:subtype/:name">
+          <ComponentRenderer />
+        </Route>
+        <Route path="/components/:type/:name">
+          <ComponentRenderer />
+        </Route>
+        <Route path="/">
+          <MainLandingPage />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
-
-export default App;
