@@ -24,7 +24,7 @@ export default () => (
       imageSrc={customerSupportIllustrationSrc}
       imageContain={true}
       imageShadow={false}
-      subheading="FAQs"
+      subheading="FAQqs"
       heading={
         <>
           Do you have <span tw="text-primary-500">Questions ?</span>

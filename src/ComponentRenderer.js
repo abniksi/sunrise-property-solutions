@@ -52,11 +52,6 @@ import TabGridCards from "components/cards/TabCardGrid.js";
 import ProfileThreeColGridCards from "components/cards/ProfileThreeColGrid.js"
 import ThreeColContactDetailsCards from "components/cards/ThreeColContactDetails.js"
 
-import ThreeColSimpleWithImageBlog from "components/blogs/ThreeColSimpleWithImage.js";
-import ThreeColSimpleWithImageAndDashedBorderBlog from "components/blogs/ThreeColSimpleWithImageAndDashedBorder.js";
-import PopularAndRecentPostsBlog from "components/blogs/PopularAndRecentBlogPosts.js";
-import GridWithFeaturedPostBlog from "components/blogs/GridWithFeaturedPost.js";
-
 import TwoColumnWithImageTestimonial from "components/testimonials/TwoColumnWithImage.js";
 import TwoColumnWithImageAndProfilePictureReviewTestimonial from "components/testimonials/TwoColumnWithImageAndProfilePictureReview.js";
 import TwoColumnWithImageAndRatingTestimonial from "components/testimonials/TwoColumnWithImageAndRating.js";
@@ -71,9 +66,6 @@ import SimpleContactUsForm from "components/forms/SimpleContactUs.js";
 import SimpleSubscribeNewsletterForm from "components/forms/SimpleSubscribeNewsletter.js";
 import TwoColContactUsForm from "components/forms/TwoColContactUsWithIllustration.js";
 import TwoColContactUsFullForm from "components/forms/TwoColContactUsWithIllustrationFullForm.js";
-
-import GetStartedCTA from "components/cta/GetStarted.js";
-import GetStartedLightCTA from "components/cta/GetStartedLight.js";
 
 import SimpleFiveColumnFooter from "components/footers/SimpleFiveColumn.js";
 import FiveColumnWithInputFormFooter from "components/footers/FiveColumnWithInputForm.js";
@@ -288,32 +280,6 @@ export const components = {
       }
     },
 
-    Blog: {
-      type: "Blog Section",
-      elements: {
-        GridWithFeaturedPost: {
-          name: "Grid With Featured Post",
-          component: GridWithFeaturedPostBlog,
-          url: "/components/blocks/Blog/GridWithFeaturedPost",
-        },
-        PopularAndRecentPosts: {
-          name: "Popular And Recent Posts",
-          component: PopularAndRecentPostsBlog,
-          url: "/components/blocks/Blog/PopularAndRecentPosts",
-        },
-        ThreeColSimpleWithImage: {
-          name: "Simple Three Column With Image",
-          component: ThreeColSimpleWithImageBlog,
-          url: "/components/blocks/Blog/ThreeColSimpleWithImage",
-        },
-        ThreeColSimpleWithImageAndDashedBorder: {
-          name: "Simple Three Column With Image and Dashed Border",
-          component: ThreeColSimpleWithImageAndDashedBorderBlog,
-          url: "/components/blocks/Blog/ThreeColSimpleWithImageAndDashedBorder",
-        },
-      } 
-    },
-
     Testimonial: {
       type: "Testimonial Section",
       elements: {
@@ -388,22 +354,6 @@ export const components = {
           name: "Two Column Contact Us - Full Form",
           component: TwoColContactUsFullForm,
           url: "/components/blocks/Form/TwoColContactUsFull",
-        },
-      }
-    },
-
-    CTA: {
-      type: "CTA Section",
-      elements: {
-        GetStarted: {
-          name: "Get Started",
-          component: GetStartedCTA,
-          url: "/components/blocks/CTA/GetStarted",
-        },
-        GetStartedLight: {
-          name: "Get Started Light",
-          component: GetStartedLightCTA,
-          url: "/components/blocks/CTA/GetStartedLight",
         },
       }
     },
