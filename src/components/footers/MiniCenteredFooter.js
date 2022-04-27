@@ -2,14 +2,14 @@ import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import {Container as ContainerBase } from "components/misc/Layouts.js"
-import logo from "../../images/logo.svg";
+import logo from "../../images/logo.png";
 import { ReactComponent as FacebookIcon } from "../../images/facebook-icon.svg";
 import { ReactComponent as TwitterIcon } from "../../images/twitter-icon.svg";
 import { ReactComponent as YoutubeIcon } from "../../images/youtube-icon.svg";
 
 
 const Container = tw(ContainerBase)`bg-gray-900 text-gray-100 -mx-8 -mb-8`
-const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
+const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24 bg-orange-100`;
 
 const Row = tw.div`flex items-center justify-center flex-col px-8`
 
@@ -28,7 +28,7 @@ const SocialLink = styled.a`
   }
 `;
 
-const CopyrightText = tw.p`text-center mt-10 font-medium tracking-wide text-sm text-gray-600`
+const CopyrightText = tw.p`text-center mt-10 font-medium tracking-wide text-sm text-white`
 export default () => {
   return (
     <Container>
@@ -36,7 +36,7 @@ export default () => {
         <Row>
           <LogoContainer>
             <LogoImg src={logo} />
-            <LogoText>Treact</LogoText>
+            <LogoText>Sunrise Property Solutions</LogoText>
           </LogoContainer>
           <LinksContainer>
             <Link href="#">Home</Link>
@@ -57,7 +57,7 @@ export default () => {
             </SocialLink>
           </SocialLinksContainer>
           <CopyrightText>
-            &copy; Copyright 2020, Treact Inc. All Rights Reserved.
+            &copy; Copyright 2022, Sunrise Property Solutions. All Rights Reserved.
           </CopyrightText>
         </Row>
       </Content>

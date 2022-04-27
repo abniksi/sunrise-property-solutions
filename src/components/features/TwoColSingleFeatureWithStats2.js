@@ -7,7 +7,7 @@ import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import StatsIllustrationSrc from "images/stats-illustration.svg";
 import { ReactComponent as SvgDotPattern } from "images/dot-pattern.svg";
 
-const Container = tw.div`relative`;
+const Container = tw.div`relative bg-white`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24`;
 const Column = tw.div`w-full max-w-md mx-auto md:max-w-none md:mx-0`;
 const ImageColumn = tw(Column)`md:w-5/12 flex-shrink-0 h-80 md:h-auto relative`;
@@ -22,10 +22,10 @@ const Image = styled.div(props => [
 ]);
 const TextContent = tw.div`lg:py-8 text-center md:text-left`;
 
-const Subheading = tw(SubheadingBase)`text-center md:text-left`;
+const Subheading = tw(SubheadingBase)`text-center md:text-left text-orange-100`;
 const Heading = tw(
   SectionHeading
-)`mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight`;
+)`mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight text-white`;
 const Description = tw.p`mt-4 text-center md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100`;
 
 const Statistics = tw.div`flex flex-col items-center sm:block text-center md:text-left mt-4`;
@@ -40,14 +40,14 @@ const DecoratorBlob = styled(SvgDotPattern)(props => [
 ]);
 
 export default ({
-  subheading = "Our Track Record",
+  subheading = "What Are We?",
   heading = (
     <>
-      We have been doing this <wbr /> since <span tw="text-primary-500">1999.</span>
+      We provide home watch, concierge, and additional services <wbr /> with <span tw="text-orange-100">care.</span>
     </>
   ),
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  primaryButtonText = "Learn More",
+  description = "We provide peace of mind to second homeowners while they are away. We offer routine checkups for your property, collecting packages and mail, coordinating services, and more. We customize plans for clients tobest suit your living situation. SPS can prepare the house for a fun-filled vacation so you can enjoy more lake time. Prepping the dock, making that time-consuming grocery store run, and cleaning up to conclude the trip are things in the past. If you need your seasonal pressure washing done, we can take care of that as well. Cleaning the yard or cleaning the boat can be taken with one phone call.",
+  primaryButtonText = "Learn Our Story",
   primaryButtonUrl = "https://timerse.com",
   imageSrc = StatsIllustrationSrc,
   imageCss = null,
@@ -71,7 +71,7 @@ export default ({
     },
     {
       key: "Awards",
-      value: "1000+"
+      value: "10100+"
     }
   ];
 
@@ -89,14 +89,14 @@ export default ({
             {subheading && <Subheading>{subheading}</Subheading>}
             <Heading>{heading}</Heading>
             <Description>{description}</Description>
-            <Statistics>
+            {/* <Statistics>
               {statistics.map((statistic, index) => (
                 <Statistic key={index}>
                   <Value>{statistic.value}</Value>
                   <Key>{statistic.key}</Key>
                 </Statistic>
               ))}
-            </Statistics>
+            </Statistics> */}
             <PrimaryButton as="a" href={primaryButtonUrl}>
               {primaryButtonText}
             </PrimaryButton>

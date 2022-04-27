@@ -7,30 +7,25 @@ import { SectionHeading } from "components/misc/Headings.js";
 
 import defaultCardImage from "../../images/shield-icon.svg";
 
-import { ReactComponent as SvgDecoratorBlob3 } from "../../images/svg-decorator-blob-3.svg";
-
 import SupportIconImage from "../../images/support-icon.svg";
 import ShieldIconImage from "../../images/shield-icon.svg";
 import CustomizeIconImage from "../../images/customize-icon.svg";
-import FastIconImage from "../../images/fast-icon.svg";
-import ReliableIconImage from "../../images/reliable-icon.svg";
-import SimpleIconImage from "../../images/simple-icon.svg";
 
-const Container = tw.div`relative`;
+const Container = tw.div`relative bg-blue-100`;
 
 const ThreeColumnContainer = styled.div`
   ${tw`flex flex-col items-center md:items-stretch md:flex-row flex-wrap md:justify-center max-w-screen-xl mx-auto py-20 md:py-24`}
 `;
-const Heading = tw(SectionHeading)`w-full`;
+const Heading = tw(SectionHeading)`w-full text-white`;
 
 const Column = styled.div`
   ${tw`md:w-1/2 lg:w-1/3 px-6 flex`}
 `;
 
 const Card = styled.div`
-  ${tw`flex flex-col mx-auto max-w-xs items-center px-6 py-10 border-2 border-dashed border-primary-500 rounded-lg mt-12`}
+  ${tw`flex flex-col mx-auto max-w-xs items-center px-6 py-10 border-2 border-dashed border-blue-200 rounded-lg mt-12 bg-white`}
   .imageContainer {
-    ${tw`border-2 border-primary-500 text-center rounded-full p-6 flex-shrink-0 relative`}
+    ${tw`border-2 border-blue-200 text-center rounded-full p-6 flex-shrink-0 relative`}
     img {
       ${tw`w-8 h-8`}
     }
@@ -41,16 +36,17 @@ const Card = styled.div`
   }
 
   .title {
-    ${tw`mt-2 font-bold text-xl leading-none text-primary-500`}
+    ${tw`mt-2 font-bold text-xl text-blue-200`}
   }
 
   .description {
-    ${tw`mt-3 font-semibold text-secondary-100 text-sm leading-loose`}
+    ${tw`mt-3 font-semibold text-white text-sm leading-loose`}
   }
-`;
 
-const DecoratorBlob = styled(SvgDecoratorBlob3)`
-  ${tw`pointer-events-none absolute right-0 bottom-0 w-64 opacity-25 transform translate-x-32 translate-y-48 `}
+  .services {
+    ${tw`mt-3 font-semibold text-white text-sm leading-loose`}
+  }
+
 `;
 
 export default () => {
@@ -63,22 +59,21 @@ export default () => {
    */
 
   const cards = [
+    { imageSrc: SupportIconImage, title: "Concierge Services", description: `Need the house to be ready for guests? We got you covered.
+    \n - Dock Clean, Prep, and Organization \n - Boat Prep \n - Grocery Stocking \n - Food Organization \n - Grill/Fireplace Gas Fillup \n - Post-Trip Cleanup` },
     {
       imageSrc: ShieldIconImage,
-      title: "Ads Management",
-      description: "We create and manage ads that you need, from creation to deployment. Lorem ipsum donor sit amet consicou."
+      title: "Home Watch",
+      description: `Perfect for seasonal homeowners who want guaranteed peace of mind with their vacation home. \n - Water Shut Off \n - Inspecting Utilities \n - Checking Electronic Systems \n - Collecting Trash Cans \n - Drive/Dock Cleaning \n - Collecting Mail \n - Off-Season Drive/Dock Check \n - Coordinating Services \n - Anything else? Just ask!`,
     },
-    { imageSrc: SupportIconImage, title: "Video Marketing" },
-    { imageSrc: CustomizeIconImage, title: "Customer Relation" },
-    { imageSrc: ReliableIconImage, title: "Product Outreach" },
-    { imageSrc: FastIconImage, title: "PR Campaign" },
-    { imageSrc: SimpleIconImage, title: "Product Expansion" }
+    { imageSrc: CustomizeIconImage, title: "Individual Services", description: `If you need your yard cleaned up or anything else washed.
+      \n - Power Washing \n - Yard Clean-Up \n - Boat Cleaning`},
   ];
 
   return (
     <Container>
       <ThreeColumnContainer>
-        <Heading>Our Professional <span tw="text-primary-500">Services</span></Heading>
+        <Heading>Our Professional <span tw="text-blue-200">Services</span></Heading>
         {cards.map((card, i) => (
           <Column key={i}>
             <Card>
@@ -95,7 +90,6 @@ export default () => {
           </Column>
         ))}
       </ThreeColumnContainer>
-      <DecoratorBlob />
     </Container>
   );
 };

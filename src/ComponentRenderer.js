@@ -7,22 +7,18 @@ import AgencyLandingPage from "AgencyLandingPage.js";
 import AgencyLandingPageImageSrc from "images/demo/AgencyLandingPage.jpeg";
 
 import LoginPage from "pages/Login.js";
-import SignupPage from "pages/Signup.js";
 import PricingPage from "pages/Pricing.js";
 import AboutUsPage from "pages/AboutUs.js";
 import ContactUsPage from "pages/ContactUs.js";
 import BlogIndexPage from "pages/BlogIndex.js";
 import TermsOfServicePage from "pages/TermsOfService.js";
-import PrivacyPolicyPage from "pages/PrivacyPolicy.js";
 
 import LoginPageImageSrc from "images/demo/LoginPage.jpeg";
-import SignupPageImageSrc from "images/demo/SignupPage.jpeg";
 import PricingPageImageSrc from "images/demo/PricingPage.jpeg";
 import AboutUsPageImageSrc from "images/demo/AboutUsPage.jpeg";
 import ContactUsPageImageSrc from "images/demo/ContactUsPage.jpeg";
 import BlogIndexPageImageSrc from "images/demo/BlogIndexPage.jpeg";
 import TermsOfServicePageImageSrc from "images/demo/TermsOfServicePage.jpeg";
-import PrivacyPolicyPageImageSrc from "images/demo/PrivacyPolicyPage.jpeg";
 
 import BackgroundAsImageHero from "components/hero/BackgroundAsImage.js";
 import IllustrationAndVideoHero from "components/hero/TwoColumnWithVideo.js";
@@ -78,7 +74,6 @@ import TwoColContactUsFullForm from "components/forms/TwoColContactUsWithIllustr
 
 import GetStartedCTA from "components/cta/GetStarted.js";
 import GetStartedLightCTA from "components/cta/GetStartedLight.js";
-import DownloadAppCTA from "components/cta/DownloadApp.js";
 
 import SimpleFiveColumnFooter from "components/footers/SimpleFiveColumn.js";
 import FiveColumnWithInputFormFooter from "components/footers/FiveColumnWithInputForm.js";
@@ -102,12 +97,6 @@ export const components = {
       imageSrc: LoginPageImageSrc,
       scrollAnimationDisabled: true,
       url: "/components/innerPages/LoginPage",
-    },
-    SignupPage: {
-      component: SignupPage,
-      url: `/components/innerPages/SignupPage`,
-      imageSrc: SignupPageImageSrc,
-      scrollAnimationDisabled: true,
     },
     PricingPage: {
       component: PricingPage,
@@ -133,11 +122,6 @@ export const components = {
       component: TermsOfServicePage,
       url: `/components/innerPages/TermsOfServicePage`,
       imageSrc: TermsOfServicePageImageSrc,
-    },
-    PrivacyPolicyPage: {
-      component: PrivacyPolicyPage,
-      url: `/components/innerPages/PrivacyPolicyPage`,
-      imageSrc: PrivacyPolicyPageImageSrc,
     }
   },
 
@@ -420,11 +404,6 @@ export const components = {
           name: "Get Started Light",
           component: GetStartedLightCTA,
           url: "/components/blocks/CTA/GetStartedLight",
-        },
-        DownloadApp: {
-          name: "Download App",
-          component: DownloadAppCTA,
-          url: "/components/blocks/CTA/DownloadApp",
         },
       }
     },

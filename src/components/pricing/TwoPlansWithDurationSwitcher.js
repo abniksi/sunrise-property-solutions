@@ -5,10 +5,11 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { SectionDescription } from "components/misc/Typography.js";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
-import { Container, ContentWithPaddingXl } from "components/misc/Layouts.js";
+// import { Container, ContentWithPaddingXl } from "components/misc/Layouts.js";
 import { ReactComponent as SvgDecoratorBlob1 } from "images/svg-decorator-blob-6.svg";
 import { ReactComponent as SvgDecoratorBlob2 } from "images/svg-decorator-blob-7.svg";
 
+const Container = tw.div`relative bg-blue-200`;
 const HeaderContainer = tw.div`w-full flex flex-col items-center`;
 const Subheading = tw(SubheadingBase)`mb-4`;
 const Heading = tw(SectionHeading)`w-full`;
@@ -69,31 +70,31 @@ const DecoratorBlob2 = styled(SvgDecoratorBlob2)`
 `;
 
 export default ({
-  subheading = "Pricing",
-  heading = "Flexible Plans.",
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  subheading = "",
+  heading = "Membership and Packages",
+  description = "Become an SPS member when you sign up for any service! Anything else you want done, we will take 15% off the original price.",
   plans = null,
   primaryButtonText = "Buy Now",
   planDurations = [
     {
-      text: "Month",
+      text: "Per Job",
       switcherText: "Monthly",
     },
     {
-      text: "Year",
+      text: "Per Job",
       switcherText: "Yearly",
     }
   ]
 }) => {
   const defaultPlans = [
     {
-      name: "Free Plan",
+      name: "Home Watch Package",
       durationPrices: ["$0", "$0"],
       mainFeature: "For Personal Blogs",
       features: ["30 Templates", "7 Landing Pages", "12 Internal Pages", "Basic Assistance"]
     },
     {
-      name: "Pro Plan",
+      name: "Concierge Package",
       durationPrices: ["$49", "$499"],
       mainFeature: "Suited for Production Websites",
       features: ["60 Templates", "8 Landing Pages", "22 Internal Pages", "Priority Assistance", "Lifetime Updates"],
@@ -107,16 +108,10 @@ export default ({
 
   return (
     <Container>
-      <ContentWithPaddingXl>
         <HeaderContainer>
           {subheading && <Subheading>{subheading}</Subheading>}
           <Heading>{heading}</Heading>
           {description && <Description>{description}</Description>}
-        <PlanDurationSwitcher>
-          {planDurations.map((planDuration, index) => (
-            <SwitchButton active={activeDurationIndex === index} key={index} onClick={() => setActiveDurationIndex(index)}>{planDuration.switcherText}</SwitchButton>
-          ))}
-        </PlanDurationSwitcher>
         </HeaderContainer>
         <PlansContainer>
           {plans.map((plan, index) => (
@@ -137,15 +132,9 @@ export default ({
                   </span>
                 ))}
               </PlanFeatures>
-              <PlanAction>
-                <BuyNowButton>{primaryButtonText}</BuyNowButton>
-              </PlanAction>
             </Plan>
           ))}
         </PlansContainer>
-      </ContentWithPaddingXl>
-      <DecoratorBlob1 />
-      <DecoratorBlob2 />
     </Container>
   );
 };
