@@ -9,10 +9,10 @@ import ResponsiveVideoEmbed from "../../helpers/ResponsiveVideoEmbed.js";
 const StyledHeader = styled(Header)`
   ${tw`pt-8 max-w-none`}
   ${DesktopNavLinks} ${NavLink}, ${LogoLink} {
-    ${tw`text-gray-100 hover:border-gray-300 hover:text-gray-300`}
+    ${tw`text-gray-100 hover:border-blue-100 hover:text-gray-300`}
   }
   ${NavToggle}.closed {
-    ${tw`text-gray-100 hover:text-primary-500`}
+    ${tw`text-gray-100 hover:text-orange-100`}
   }
 `;
 const Container = styled.div`
@@ -38,11 +38,11 @@ const SlantedBackground = styled.span`
   ${tw`relative px-4 -mx-4 py-2 text-orange-100`}
   &::before {
     content: "";
-    ${tw`absolute inset-0 bg-blue-200 transform -skew-x-12 -z-10`}
+    ${tw`absolute inset-0 bg-blue-100 transform -skew-x-12 -z-10`}
   }
 `;
 
-const Notification = tw.span`inline-block my-4 pl-3 py-1 text-gray-100 border-l-4 border-blue-200 font-medium text-sm`;
+const Notification = tw.span`inline-block my-4 pl-3 py-1 text-gray-100 border-l-4 border-blue-100 font-medium text-sm`;
 
 const PrimaryAction = tw.button`px-8 py-3 mt-10 text-sm sm:text-base sm:mt-16 sm:px-8 sm:py-4 bg-orange-100 text-white font-bold rounded shadow transition duration-300 hocus:bg-orange-100 hocus:text-gray-100 focus:shadow-outline`;
 
@@ -91,7 +91,7 @@ export default () => {
               <br />
               <SlantedBackground>Property Service Team.</SlantedBackground>
             </Heading>
-            <PrimaryAction>Read Customer Stories</PrimaryAction>
+            <PrimaryAction>What We Do</PrimaryAction>
           </LeftColumn>
           <RightColumn>
             <StyledResponsiveVideoEmbed

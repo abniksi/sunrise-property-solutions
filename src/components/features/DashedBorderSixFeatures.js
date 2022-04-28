@@ -11,21 +11,21 @@ import SupportIconImage from "../../images/support-icon.svg";
 import ShieldIconImage from "../../images/shield-icon.svg";
 import CustomizeIconImage from "../../images/customize-icon.svg";
 
-const Container = tw.div`relative bg-blue-100`;
+const Container = tw.div`relative bg-white`;
 
 const ThreeColumnContainer = styled.div`
   ${tw`flex flex-col items-center md:items-stretch md:flex-row flex-wrap md:justify-center max-w-screen-xl mx-auto py-20 md:py-24`}
 `;
-const Heading = tw(SectionHeading)`w-full text-white`;
+const Heading = tw(SectionHeading)`w-full text-blue-200`;
 
 const Column = styled.div`
   ${tw`md:w-1/2 lg:w-1/3 px-6 flex`}
 `;
 
 const Card = styled.div`
-  ${tw`flex flex-col mx-auto max-w-xs items-center px-6 py-10 border-2 border-dashed border-blue-200 rounded-lg mt-12 bg-white`}
+  ${tw`flex flex-col mx-auto max-w-xs items-center px-6 py-10 border-2 border-dashed border-transparent rounded-lg mt-12 bg-blue-200`}
   .imageContainer {
-    ${tw`border-2 border-blue-200 text-center rounded-full p-6 flex-shrink-0 relative`}
+    ${tw`border-2 border-orange-100 text-center rounded-full p-6 flex-shrink-0 relative`}
     img {
       ${tw`w-8 h-8`}
     }
@@ -36,17 +36,12 @@ const Card = styled.div`
   }
 
   .title {
-    ${tw`mt-2 font-bold text-xl text-blue-200`}
+    ${tw`mt-2 font-bold text-xl text-orange-100`}
   }
 
   .description {
     ${tw`mt-3 font-semibold text-white text-sm leading-loose`}
   }
-
-  .services {
-    ${tw`mt-3 font-semibold text-white text-sm leading-loose`}
-  }
-
 `;
 
 export default () => {
@@ -73,7 +68,7 @@ export default () => {
   return (
     <Container>
       <ThreeColumnContainer>
-        <Heading>Our Professional <span tw="text-blue-200">Services</span></Heading>
+        <Heading>Our Professional <span tw="text-orange-100">Services</span></Heading>
         {cards.map((card, i) => (
           <Column key={i}>
             <Card>
@@ -83,7 +78,7 @@ export default () => {
               <span className="textContainer">
                 <span className="title">{card.title || "Fully Secure"}</span>
                 <p className="description">
-                  {card.description || "Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud. Sic Semper Tyrannis. Neoas Calie artel."}
+                  {card.description}
                 </p>
               </span>
             </Card>
