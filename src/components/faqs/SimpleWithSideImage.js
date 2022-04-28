@@ -21,7 +21,7 @@ const Image = styled.div(props => [
 ]);
 
 const FAQContent = tw.div`lg:ml-12 text-blue-100`;
-const Subheading = tw(SubheadingBase)`mb-4 text-center lg:text-left`;
+const Subheading = tw(SubheadingBase)`mb-4 text-center lg:text-left text-blue-100`;
 const Heading = tw(SectionHeading)`lg:text-left text-orange-100`;
 const Description = tw.p`max-w-xl text-center mx-auto lg:mx-0 lg:text-left lg:max-w-none leading-relaxed text-sm sm:text-base lg:text-lg font-medium mt-4 text-orange-100`;
 

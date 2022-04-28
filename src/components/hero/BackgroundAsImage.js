@@ -62,13 +62,13 @@ export default () => {
         About
       </NavLink>
       <NavLink href="#">
-        Blog
+        Services
       </NavLink>
       <NavLink href="#">
-        Locations
+        Memberships
       </NavLink>
       <NavLink href="#">
-        Pricing
+        FAQs
       </NavLink>
     </NavLinks>,
     <NavLinks key={2}>
