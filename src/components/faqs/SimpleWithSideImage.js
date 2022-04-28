@@ -20,17 +20,17 @@ const Image = styled.div(props => [
   tw`hidden lg:block rounded h-144 bg-center`
 ]);
 
-const FAQContent = tw.div`lg:ml-12`;
+const FAQContent = tw.div`lg:ml-12 text-blue-100`;
 const Subheading = tw(SubheadingBase)`mb-4 text-center lg:text-left`;
-const Heading = tw(SectionHeading)`lg:text-left`;
-const Description = tw.p`max-w-xl text-center mx-auto lg:mx-0 lg:text-left lg:max-w-none leading-relaxed text-sm sm:text-base lg:text-lg font-medium mt-4 text-secondary-100`;
+const Heading = tw(SectionHeading)`lg:text-left text-orange-100`;
+const Description = tw.p`max-w-xl text-center mx-auto lg:mx-0 lg:text-left lg:max-w-none leading-relaxed text-sm sm:text-base lg:text-lg font-medium mt-4 text-orange-100`;
 
 const FAQSContainer = tw.dl`mt-12`;
 const FAQ = tw.div`cursor-pointer mt-8 select-none border lg:border-0 px-8 py-4 lg:p-0 rounded-lg lg:rounded-none`;
 const Question = tw.dt`flex justify-between items-center`;
 const QuestionText = tw.span`text-lg lg:text-xl font-semibold`;
 const QuestionToggleIcon = styled.span`
-  ${tw`ml-2 bg-primary-500 text-gray-100 p-1 rounded-full group-hover:bg-primary-700 group-hover:text-gray-200 transition duration-300`}
+  ${tw`ml-2 bg-orange-100 text-white p-1 rounded-full group-hover:bg-orange-100 group-hover:text-orange-100 transition duration-300`}
   svg {
     ${tw`w-4 h-4`}
   }
@@ -52,22 +52,22 @@ export default ({
    */
   const defaultFaqs = [
     {
-      question: "Is lunch provided free of cost ?",
+      question: "Random Jacob Gilmore question #1",
       answer:
         "Yes, it is, if you have a membership with us. Otherwise it is charged as per the menu. Some limits do apply as to how much items can be included in your lunch. This limit is enough for any one person and merely exists to discourage abusal of the system."
     },
     {
-      question: "Do you have 2 Bedroom suites ?",
+      question: "Random Jacob Gilmore question #2",
       answer:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     },
     {
-      question: "Are Wi-Fi costs included in the price ?",
+      question: "Random Jacob Gilmore question #3",
       answer:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     },
     {
-      question: "Where can I reach you for support ?",
+      question: "Random Jacob Gilmore question #4",
       answer:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     }

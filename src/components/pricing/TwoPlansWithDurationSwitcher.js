@@ -9,11 +9,11 @@ import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import { ReactComponent as SvgDecoratorBlob1 } from "images/svg-decorator-blob-6.svg";
 import { ReactComponent as SvgDecoratorBlob2 } from "images/svg-decorator-blob-7.svg";
 
-const Container = tw.div`relative bg-blue-200`;
+const Container = tw.div`relative bg-blue-100`;
 const HeaderContainer = tw.div`w-full flex flex-col items-center`;
-const Subheading = tw(SubheadingBase)`mb-4`;
-const Heading = tw(SectionHeading)`w-full`;
-const Description = tw(SectionDescription)`w-full text-center`;
+const Subheading = tw(SubheadingBase)`mb-4 text-white`;
+const Heading = tw(SectionHeading)`w-full text-white`;
+const Description = tw(SectionDescription)`w-full text-center text-white`;
 
 const PlanDurationSwitcher = tw.div`block w-full max-w-xs sm:inline-block sm:w-auto border-2 rounded-full px-1 py-1 mt-8`;
 const SwitchButton = styled.button`
@@ -33,27 +33,27 @@ const Plan = styled.div`
 `;
 
 const PlanHeader = styled.div`
-  ${tw`flex flex-col leading-relaxed py-8 -mx-8 bg-gray-100 rounded-t-lg`}
+  ${tw`flex flex-col leading-relaxed py-8 -mx-8 bg-gray-100 rounded-t-lg text-orange-100`}
   .name {
-    ${tw`font-bold text-xl`}
+    ${tw`font-bold text-xl text-orange-100 text-orange-100`}
   }
   .price {
-    ${tw`font-bold text-4xl sm:text-5xl my-1`}
+    ${tw`font-bold text-4xl sm:text-5xl my-1 text-orange-100`}
   }
   .slash {
-    ${tw`text-xl text-gray-500`}
+    ${tw`text-xl text-orange-100`}
   }
   .duration {
-    ${tw`lowercase text-gray-500 font-medium tracking-widest`}
+    ${tw`lowercase text-blue-100 font-medium tracking-widest`}
   }
   .mainFeature {
-    ${tw`text-gray-500 text-sm font-medium tracking-wide`}
+    ${tw`text-blue-100 text-sm font-medium tracking-wide`}
   }
 `;
 const PlanFeatures = styled.div`
-  ${tw`flex flex-col -mx-8 px-8 py-8 flex-1 text-sm`}
+  ${tw`flex flex-col -mx-8 px-8 py-8 flex-1 text-sm text-orange-100`}
   .feature {
-    ${tw`mt-5 first:mt-0 font-semibold text-gray-500`}
+    ${tw`mt-5 first:mt-0 font-semibold text-orange-100`}
   }
 `;
 
@@ -91,7 +91,7 @@ export default ({
       name: "Home Watch Package",
       durationPrices: ["$0", "$0"],
       mainFeature: "For Personal Blogs",
-      features: ["30 Templates", "7 Landing Pages", "12 Internal Pages", "Basic Assistance"]
+      features: ["30 Templates", "7 Landing Pages", "12 Internal Pages", "Basic Assistance", "Something Else"]
     },
     {
       name: "Concierge Package",

@@ -16,14 +16,14 @@ const Container = tw.div`relative bg-white`;
 const ThreeColumnContainer = styled.div`
   ${tw`flex flex-col items-center md:items-stretch md:flex-row flex-wrap md:justify-center max-w-screen-xl mx-auto py-20 md:py-24`}
 `;
-const Heading = tw(SectionHeading)`w-full text-blue-200`;
+const Heading = tw(SectionHeading)`w-full text-blue-100`;
 
 const Column = styled.div`
   ${tw`md:w-1/2 lg:w-1/3 px-6 flex`}
 `;
 
 const Card = styled.div`
-  ${tw`flex flex-col mx-auto max-w-xs items-center px-6 py-10 border-2 border-dashed border-transparent rounded-lg mt-12 bg-blue-200`}
+  ${tw`flex flex-col mx-auto max-w-xs items-center px-6 py-10 border-2 border-dashed border-transparent rounded-lg mt-12 bg-blue-100`}
   .imageContainer {
     ${tw`border-2 border-orange-100 text-center rounded-full p-6 flex-shrink-0 relative`}
     img {

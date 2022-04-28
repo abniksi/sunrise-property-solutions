@@ -38,7 +38,7 @@ const SlantedBackground = styled.span`
   ${tw`relative px-4 -mx-4 py-2 text-orange-100`}
   &::before {
     content: "";
-    ${tw`absolute inset-0 bg-blue-100 transform -skew-x-12 -z-10`}
+    ${tw`absolute inset-0 bg-blue-200 transform -skew-x-12 -z-10`}
   }
 `;
 
