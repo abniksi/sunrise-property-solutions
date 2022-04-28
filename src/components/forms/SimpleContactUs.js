@@ -18,7 +18,7 @@ const FormContainer = styled.div`
     ${tw`w-full bg-transparent text-gray-100 text-base font-medium tracking-wide border-b-2 py-2 text-gray-100 hocus:border-blue-100 focus:outline-none transition duration-200`};
 
     ::placeholder {
-      ${tw`text-gray-500`}
+      ${tw`text-gray-100`}
     }
   }
 `;
@@ -29,7 +29,7 @@ const InputContainer = tw.div`relative py-5 mt-6`;
 const Label = tw.label`absolute top-0 left-0 tracking-wide font-semibold text-sm`;
 const Input = tw.input``;
 const TextArea = tw.textarea`h-24 sm:h-full resize-none`;
-const SubmitButton = tw.button`w-full sm:w-32 mt-6 py-3 bg-gray-900 text-blue-100 rounded-full font-bold tracking-wide shadow-lg uppercase text-sm transition duration-300 transform focus:outline-none focus:shadow-outline hover:bg-gray-300 hover:text-blue-100 hocus:-translate-y-px hocus:shadow-xl`;
+const SubmitButton = tw.button`w-full sm:w-32 mt-6 py-3 bg-blue-100 text-white rounded-full font-bold tracking-wide shadow-lg uppercase text-sm transition duration-300 transform focus:outline-none focus:shadow-outline hover:bg-gray-300 hover:text-blue-100 hocus:-translate-y-px hocus:shadow-xl`;
 
 export default () => {
   return (
@@ -53,7 +53,7 @@ export default () => {
                 <Column>
                   <InputContainer tw="flex-1">
                     <Label htmlFor="name-input">Your Message</Label>
-                    <TextArea id="message-input" name="message" placeholder="E.g. Details about your event"/>
+                    <TextArea id="message-input" name="message" placeholder="E.g. Details about your service request"/>
                   </InputContainer>
                 </Column>
               </TwoColumn>

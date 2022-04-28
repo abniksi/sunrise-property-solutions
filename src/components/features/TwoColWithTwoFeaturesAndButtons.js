@@ -49,7 +49,7 @@ export default ({
   subheading = "Our Expertise",
   heading = (
     <>
-      We have the most <span tw="text-blue-100">professional</span> marketing team.
+      We have the most <span tw="text-blue-100">professional</span> property service team.
     </>
   ),
   description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",

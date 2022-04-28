@@ -9,7 +9,7 @@ import defaultCardImage from "../../images/shield-icon.svg";
 
 import SupportIconImage from "../../images/support-icon.svg";
 import ShieldIconImage from "../../images/shield-icon.svg";
-import CustomizeIconImage from "../../images/customize-icon.svg";
+import CustomizeIconImage from "../../images/simple-icon.svg";
 
 const Container = tw.div`relative bg-white`;
 
