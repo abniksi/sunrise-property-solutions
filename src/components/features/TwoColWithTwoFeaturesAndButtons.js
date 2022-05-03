@@ -46,13 +46,30 @@ const FeatureDescription = tw.div`mt-1 text-sm`;
 const PrimaryButton = tw(PrimaryButtonBase)`mt-8 md:mt-10 text-sm inline-block mx-auto md:mx-0 bg-orange-100`;
 
 export default ({
-  subheading = "Our Expertise",
+  subheading = "Our Story",
   heading = (
     <>
-      We have the most <span tw="text-blue-100">professional</span> property service team.
+      We understand how <span tw="text-blue-100">overwhelming</span> taking care of a property can be.
     </>
   ),
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  description = `Our family considers Lake of the Ozarks our second home. We have been coming down
+                from Bloomington, Illinois for the past 12 years making lifelong memories. It started as
+                summer vacations, then 6 years ago our family bought a house, and now we live here.\n 
+
+                Like most people who own property at the lake, there is an incredible amount of upkeep
+                required and preparation needed when entertaining guests. Every trip we make, the house
+                needs to be cleaned, the yard needs something done, the dock, deck, driveway, sidewalks
+                need to be washed, chairs and cushions need to be put out, groceries, coolers, and grills! 
+                Then, when you leave, you have to clean everything up! This is just
+                during the spring and summer season.\n 
+
+                We asked each other, “Why not provide these services and then some to everyone at the
+                lake?” We understand having a second home comes with great responsibility. Whether
+                it is making sure the house is in perfect condition year-round, keeping your yard clean,
+                cleaning the driveway and dock a few times per year, you can hand these pesky tasks
+                over to us. You’ll never have to worry if we will be busy fishing in a cove during the day
+                because we do not fish. We will always be one call away. We cannot wait to earn your
+                business. Call us today!`,
   primaryButtonText = "See Our Portfolio",
   primaryButtonUrl = "https://timerse.com",
   features = null,
@@ -80,7 +97,7 @@ export default ({
   if (!features) features = defaultFeatures;
 
   return (
-    <Container>
+    <Container id='ourStory'>
       <TwoColumn>
         <ImageColumn>
           <Image imageSrc={TeamIllustrationSrc} />
@@ -90,7 +107,7 @@ export default ({
             <Subheading>{subheading}</Subheading>
             <Heading>{heading}</Heading>
             <Description>{description}</Description>
-            <Features>
+            {/* <Features>
               {features.map((feature, index) => (
                 <Feature key={index}>
                   <FeatureIconContainer>{<feature.Icon />}</FeatureIconContainer>
@@ -100,7 +117,7 @@ export default ({
                   </FeatureText>
                 </Feature>
               ))}
-            </Features>
+            </Features> */}
             {/* <PrimaryButton as="a" href={primaryButtonUrl}>
               {primaryButtonText}
             </PrimaryButton> */}

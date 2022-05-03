@@ -107,7 +107,7 @@ export default ({
   const [activeDurationIndex, setActiveDurationIndex] = useState(0);
 
   return (
-    <Container>
+    <Container id='packages'>
         <HeaderContainer>
           {subheading && <Subheading>{subheading}</Subheading>}
           <Heading>{heading}</Heading>

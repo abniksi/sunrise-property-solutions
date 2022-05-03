@@ -29,11 +29,11 @@ const InputContainer = tw.div`relative py-5 mt-6`;
 const Label = tw.label`absolute top-0 left-0 tracking-wide font-semibold text-sm`;
 const Input = tw.input``;
 const TextArea = tw.textarea`h-24 sm:h-full resize-none`;
-const SubmitButton = tw.button`w-full sm:w-32 mt-6 py-3 bg-blue-100 text-white rounded-full font-bold tracking-wide shadow-lg uppercase text-sm transition duration-300 transform focus:outline-none focus:shadow-outline hover:bg-gray-300 hover:text-blue-100 hocus:-translate-y-px hocus:shadow-xl`;
+const SubmitButton = tw.button`w-full sm:w-32 mt-6 py-3 bg-blue-100 text-white rounded-full font-bold tracking-wide shadow-lg uppercase text-sm transition duration-300 transform focus:outline-none focus:shadow-outline hover:bg-blue-100 hover:text-white hocus:-translate-y-px hocus:shadow-xl`;
 
 export default () => {
   return (
-    <Container>
+    <Container id='contactUs'>
       <Content>
         <FormContainer>
           <div tw="mx-auto max-w-4xl">
@@ -48,6 +48,10 @@ export default () => {
                   <InputContainer>
                     <Label htmlFor="email-input">Your Email Address</Label>
                     <Input id="email-input" type="email" name="email" placeholder="E.g. john@mail.com" />
+                  </InputContainer>
+                  <InputContainer>
+                    <Label htmlFor="phone-input">Your Phone Number</Label>
+                    <Input id="phone-input" type="phone" name="phone" placeholder="(123) 456-7890" />
                   </InputContainer>
                 </Column>
                 <Column>

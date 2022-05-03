@@ -20,7 +20,7 @@ const Container = styled.div`
   background-image: url("https://images.unsplash.com/photo-1594771386350-7ff4d17afbc2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
 `;
 
-const OpacityOverlay = tw.div`z-10 absolute inset-0 bg-blue-200 opacity-25`;
+const OpacityOverlay = tw.div`z-10 absolute inset-0 bg-blue-200 opacity-50`;
 
 const HeroContainer = tw.div`z-20 relative px-4 sm:px-8 max-w-screen-xl mx-auto`;
 const TwoColumn = tw.div`pt-24 pb-32 px-4 flex justify-between items-center flex-col lg:flex-row`;
@@ -58,40 +58,43 @@ const StyledResponsiveVideoEmbed = styled(ResponsiveVideoEmbed)`
 export default () => {
   const navLinks = [
     <NavLinks key={1}>
-      <NavLink href="#">
+      <NavLink href="#whatWeDo">
         About
       </NavLink>
-      <NavLink href="#">
+      <NavLink href="#services">
         Services
       </NavLink>
-      <NavLink href="#">
+      <NavLink href="#ourStory">
+        Our Story
+      </NavLink>
+      <NavLink href="#packages">
         Memberships
       </NavLink>
-      <NavLink href="#">
+      <NavLink href="#faqs">
         FAQs
       </NavLink>
     </NavLinks>,
     <NavLinks key={2}>
-      <PrimaryLink href="/#">
+      <PrimaryLink href="#contactUs">
         Hire Us
       </PrimaryLink>
     </NavLinks>
   ];
 
   return (
-    <Container>
+    <Container id='topOfWebsite'>
       <OpacityOverlay />
       <HeroContainer>
         <StyledHeader links={navLinks} />
         <TwoColumn>
           <LeftColumn>
-            <Notification>We provide services for Sunrise Beach, Osage Beach, Village of Four Seasons, Lake Ozark, and Camdenton.</Notification>
+            <Notification>Serving in the Lake of the Ozarks area. Covering Sunrise Beach, Osage Beach, Lake Ozark, Village of the Four Seasons, and Camendton.</Notification>
             <Heading>
               <span>Hire the best</span>
               <br />
               <SlantedBackground>Property Service Team.</SlantedBackground>
             </Heading>
-            <PrimaryAction>What We Do</PrimaryAction>
+            <PrimaryAction as="a" href="#whatWeDo">What We Do</PrimaryAction>
           </LeftColumn>
           <RightColumn>
             <StyledResponsiveVideoEmbed

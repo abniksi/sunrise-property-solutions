@@ -8,8 +8,8 @@ import { ReactComponent as TwitterIcon } from "../../images/twitter-icon.svg";
 import { ReactComponent as YoutubeIcon } from "../../images/youtube-icon.svg";
 
 
-const Container = tw(ContainerBase)`bg-blue-100 text-gray-100 -mx-8 -mb-8`
-const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24 bg-blue-100`;
+const Container = tw(ContainerBase)`bg-blue-200 text-gray-100 -mx-8 -mb-8`
+const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24 bg-blue-200`;
 
 const Row = tw.div`flex items-center justify-center flex-col px-8`
 
@@ -31,7 +31,7 @@ const SocialLink = styled.a`
 const CopyrightText = tw.p`text-center mt-10 font-medium tracking-wide text-sm text-white`
 export default () => {
   return (
-    <Container>
+    <Container id='footer'>
       <Content>
         <Row>
           <LogoContainer>
@@ -39,14 +39,15 @@ export default () => {
             {/* <LogoText>Sunrise Property Solutions</LogoText> */}
           </LogoContainer>
           <LinksContainer>
-            <Link href="#">Home</Link>
-            <Link href="#">About</Link>
-            <Link href="#">Memberships</Link>
-            <Link href="#">FAQs</Link>
-            <Link href="#">Contact Us</Link>
+            <Link href="#topOfWebsite">Home</Link>
+            <Link href="#whatWeDo">About</Link>
+            <Link href="#services">Services</Link>
+            <Link href="#ourStory">Our Story</Link>
+            <Link href="#faqs">FAQs</Link>
+            <Link href="#contactUs">Contact Us</Link>
           </LinksContainer>
           <SocialLinksContainer>
-            <SocialLink href="https://facebook.com">
+            <SocialLink href="https://www.facebook.com/Sunrise-Property-Solutions-LLC-106772411992258">
               <FacebookIcon />
             </SocialLink>
             <SocialLink href="https://twitter.com">
@@ -57,7 +58,7 @@ export default () => {
             </SocialLink>
           </SocialLinksContainer>
           <CopyrightText>
-            &copy; Copyright 2022, Sunrise Property Solutions. All Rights Reserved.
+            &copy; Copyright 2022, Sunrise Property Solutions LLC. All Rights Reserved.
           </CopyrightText>
         </Row>
       </Content>

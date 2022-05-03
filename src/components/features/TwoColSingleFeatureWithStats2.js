@@ -33,7 +33,7 @@ const Statistic = tw.div`text-left sm:inline-block sm:mr-12 last:mr-0 mt-4`;
 const Value = tw.div`font-bold text-lg sm:text-xl lg:text-2xl text-secondary-500 tracking-wide`;
 const Key = tw.div`font-medium text-primary-700`;
 
-const PrimaryButton = tw(PrimaryButtonBase)`mt-8 md:mt-10 text-sm inline-block mx-auto md:mx-0 bg-orange-100 hocus:bg-orange-100 hocus:text-gray-200`;
+const PrimaryButton = tw(PrimaryButtonBase)`mt-8 md:mt-10 text-sm inline-block mx-auto md:mx-0 bg-orange-100 hocus:bg-orange-100 hocus:text-white text-white`;
 
 const DecoratorBlob = styled(SvgDotPattern)(props => [
   tw`w-20 h-20 absolute right-0 bottom-0 transform translate-x-1/2 translate-y-1/2 fill-current text-primary-500 -z-10`
@@ -43,12 +43,12 @@ export default ({
   subheading = "What Are We?",
   heading = (
     <>
-      We provide home watch, concierge, and additional services <wbr /> with <span tw="text-orange-100">care.</span>
+      We provide home watching, concierge, and additional services <wbr /> with <span tw="text-orange-100">care.</span>
     </>
   ),
-  description = "We provide peace of mind to second homeowners while they are away. We offer routine checkups for your property, collecting packages and mail, coordinating services, and more. We customize plans for clients tobest suit your living situation. SPS can prepare the house for a fun-filled vacation so you can enjoy more lake time. Prepping the dock, making that time-consuming grocery store run, and cleaning up to conclude the trip are things in the past. If you need your seasonal pressure washing done, we can take care of that as well. Cleaning the yard or cleaning the boat can be taken with one phone call.",
+  description = "We provide peace of mind to second homeowners while they are away. We offer routine checkups for your property, collecting packages and mail, coordinating services, and more. We customize plans for clients to best suit your living situation. SPS can prepare the house for a fun-filled vacation so you can enjoy more lake time. Prepping the dock, making that time-consuming grocery store run, and cleaning up to conclude the trip are things in the past. If you need your seasonal pressure washing done, we can take care of that as well. Cleaning the yard or cleaning the boat can be taken with one phone call.",
   primaryButtonText = "Learn Our Story",
-  primaryButtonUrl = "https://timerse.com",
+  primaryButtonUrl = "#ourStory",
   imageSrc = StatsIllustrationSrc,
   imageCss = null,
   imageContainerCss = null,
@@ -78,7 +78,7 @@ export default ({
   if (!statistics) statistics = defaultStatistics;
 
   return (
-    <Container>
+    <Container id="whatWeDo">
       <TwoColumn css={!imageInsideDiv && tw`md:items-center`}>
         <ImageColumn css={imageContainerCss}>
           {imageInsideDiv ? <Image imageSrc={imageSrc} css={imageCss} /> : <img src={imageSrc} css={imageCss} alt="" />}
