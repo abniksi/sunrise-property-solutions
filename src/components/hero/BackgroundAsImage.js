@@ -12,7 +12,7 @@ const StyledHeader = styled(Header)`
     ${tw`text-gray-100 hover:border-blue-100 hover:text-gray-300`}
   }
   ${NavToggle}.closed {
-    ${tw`text-gray-100 hover:text-orange-100`}
+    ${tw`text-white hover:text-orange-100`}
   }
 `;
 const Container = styled.div`

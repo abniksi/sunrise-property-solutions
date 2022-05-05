@@ -15,7 +15,7 @@ const FormContainer = styled.div`
     ${tw`text-3xl sm:text-4xl font-bold`}
   }
   input,textarea {
-    ${tw`w-full bg-transparent text-gray-100 text-base font-medium tracking-wide border-b-2 py-2 text-gray-100 hocus:border-blue-100 focus:outline-none transition duration-200`};
+    ${tw`w-full bg-transparent text-gray-100 text-base font-medium tracking-wide border-b-2 py-2 text-gray-100 hocus:border-blue-200 focus:outline-none transition duration-200`};
 
     ::placeholder {
       ${tw`text-gray-100`}
@@ -29,7 +29,7 @@ const InputContainer = tw.div`relative py-5 mt-6`;
 const Label = tw.label`absolute top-0 left-0 tracking-wide font-semibold text-sm`;
 const Input = tw.input``;
 const TextArea = tw.textarea`h-24 sm:h-full resize-none`;
-const SubmitButton = tw.button`w-full sm:w-32 mt-6 py-3 bg-blue-100 text-white rounded-full font-bold tracking-wide shadow-lg uppercase text-sm transition duration-300 transform focus:outline-none focus:shadow-outline hover:bg-blue-100 hover:text-white hocus:-translate-y-px hocus:shadow-xl`;
+const SubmitButton = tw.button`w-full sm:w-32 mt-6 py-3 bg-blue-200 text-white rounded-full font-bold tracking-wide shadow-lg uppercase text-sm transition duration-300 transform focus:outline-none focus:shadow-outline hover:bg-blue-200 hover:text-white hocus:-translate-y-px hocus:shadow-xl`;
 
 export default () => {
   return (

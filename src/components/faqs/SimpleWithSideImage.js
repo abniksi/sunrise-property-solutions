@@ -40,7 +40,7 @@ const Answer = motion(tw.dd`pointer-events-none text-sm sm:text-base leading-rel
 export default ({
   subheading = "",
   heading = "Questions",
-  description = "Here are some frequently asked questions about our hotels from our loving customers. Should you have any other questions, feel free to reach out via the contact form below.",
+  description = "Here are some frequently asked questions about our services and memberships from our loving customers. Should you have any other questions, feel free to reach out via the contact form below or call/text (309) 530-6861!",
   imageSrc = "https://images.unsplash.com/photo-1579427421635-a0015b804b2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80",
   imageContain = false,
   imageShadow = true,
@@ -52,25 +52,45 @@ export default ({
    */
   const defaultFaqs = [
     {
-      question: "Random Jacob Gilmore question #1",
+      question: "How does a Home Watch Membership work?",
       answer:
-        "Yes, it is, if you have a membership with us. Otherwise it is charged as per the menu. Some limits do apply as to how much items can be included in your lunch. This limit is enough for any one person and merely exists to discourage abusal of the system."
+        `We customize plans of care to each client. We understand every homeowner is different and we
+        want to work around your needs. Some customers want yard maintenance done throughout the
+        summer season and weekly check-ins in the offseason. Some want the house ready for
+        holidays with on-call services when they are not there. Call, text, or fill out the questionnaire
+        below for a free consultation on how we can provide peace of mind for your vacation home!`
     },
     {
-      question: "Random Jacob Gilmore question #2",
+      question: "How would a Home Watch Membership benefit me?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        `Having trust-worthy residents of the Lake of the Ozarks provide personalized check-ins in and
+        outside your home gives you the sense of security that your property is in perfect condition all
+        year-round. Becoming an SPS member gives you the opportunity to save money on pressure
+        washing, boat cleaning, yard cleaning and any concierge services you want done throughout
+        the year. This takes away the hassle of calling multiple different services to take care of your
+        personal property.`
     },
     {
-      question: "Random Jacob Gilmore question #3",
+      question: "What type of pressure washing jobs do you offer?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        `We can pressure wash your dock, driveway, golf cart path, boat sheds, patios, pool area, and
+        dock roof. We also use a soft wash system for any sensitive material like vinyl siding and
+        wooden decks. We make sure to use soaps that comply with the Clean Water Act so it is safe to
+        clean surfaces near the lake!`
     },
     {
-      question: "Random Jacob Gilmore question #4",
+      question: "How do I receive a free quote for pressure washing?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-    }
+        "Call or text (309) 530-6861 or fill out the questionnaire below today!"
+    },
+    {
+      question: "What are concierge services?",
+      answer:
+        `Concierge services can be any tasks you want done to prepare for a weekend at the lake. We
+        can make sure groceries are stored in the fridge and beverages are in coolers before you even
+        get there. We can set out all patio and dock furniture before arrival so you do not have to lift a
+        finger as well. When the group is ready to leave, we can come in and clean the place up as well.`
+    },
   ];
 
   if (!faqs || faqs.length === 0) faqs = defaultFaqs;
