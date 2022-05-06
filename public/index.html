@@ -26,9 +26,6 @@
     -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45799926-9"></script> -->
-    <script>
-      console.log('.ewnzgJ')
-    </script>
     <title>Sunrise Property Solutions</title>
     <meta
       name="description"
@@ -61,4 +58,61 @@
     -->
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </body>
+
+  <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+      const submit = document.querySelector('#awsSubmit')
+      const nameEntered = document.querySelector('#name-input')
+      const emailEntered  = document.querySelector('#email-input')
+      const phoneEntered = document.querySelector('#phone-input')
+      const messageEntered = document.querySelector('#message-input')
+    
+
+      submit.onclick = () => {
+
+        let emailValidation = validator.isEmail(emailEntered.value);
+        let phoneValidation = validator.isNumeric(phoneEntered.value);
+        let nameValidation = validator.isAlpha(nameEntered.value.replace(/ /g, ""));
+
+        if(!nameValidation){
+          window.alert('Please check name entered and try again.')
+        }else if(!emailValidation){
+          window.alert('Please check email entered and try again.')
+        }else if((phoneEntered.value.length !== 10)){
+          window.alert('Phone number should be 10 digits. Please fix and try again.')
+        }else if(!phoneValidation){
+            window.alert('Phone number can only be digits.')
+        }else if(messageEntered.value.length <= 0){
+          window.alert('Message cannot be empty. Please put in your request.')
+        }else{
+          axios.post('https://cors-anywhere.herokuapp.com/https://nqsby4uhq3.execute-api.us-east-1.amazonaws.com/sendEmailsSunrisePropertySolutions', {
+              email: emailEntered.value,
+              message: messageEntered.value,
+              phone: phoneEntered.value,
+              name: nameEntered.value
+          },
+          {
+              headers: {
+                  ContentType: 'application/json',
+                  'Access-Control-Allow-Origin': '*',
+              }
+          })
+          .then(res => {
+            messageEntered.value = '';
+            emailEntered.value = '';
+            phoneEntered.value = '';
+            nameEntered.value = '';
+            window.alert("We recieved your request! You will get a confirmation email.");
+          })
+          .catch(err => {
+            window.alert("Something went wrong and we did not recieve your request. Please try again or text/call (309)530-6861.");
+          })
+      }
+
+      const form = document.getElementById("awsForm");
+      function handleForm(event) { event.preventDefault(); } 
+      form.addEventListener('submit', handleForm);
+    }
+  </script>
 </html>

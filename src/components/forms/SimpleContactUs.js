@@ -38,31 +38,31 @@ export default () => {
         <FormContainer>
           <div tw="mx-auto max-w-4xl">
             <h2>Contact Us!</h2>
-            <form action="#">
+            <form id="awsForm">
               <TwoColumn>
                 <Column>
                   <InputContainer>
                     <Label htmlFor="name-input">Your Name</Label>
-                    <Input id="name-input" type="text" name="name" placeholder="E.g. John Doe" />
+                    <Input id="name-input" type="text" name="name" placeholder="E.g. John Doe" minlength="2" maxlength="60" required/>
                   </InputContainer>
                   <InputContainer>
                     <Label htmlFor="email-input">Your Email Address</Label>
-                    <Input id="email-input" type="email" name="email" placeholder="E.g. john@mail.com" />
+                    <Input id="email-input" type="email" name="email" placeholder="E.g. john@mail.com" minlength="2" maxlength="60" required />
                   </InputContainer>
                   <InputContainer>
                     <Label htmlFor="phone-input">Your Phone Number</Label>
-                    <Input id="phone-input" type="phone" name="phone" placeholder="(123) 456-7890" />
+                    <Input id="phone-input" type="phone" name="phone" placeholder="123 456 7890"  minlength="2" maxlength="60" required/>
                   </InputContainer>
                 </Column>
                 <Column>
                   <InputContainer tw="flex-1">
                     <Label htmlFor="name-input">Your Message</Label>
-                    <TextArea id="message-input" name="message" placeholder="E.g. Details about your service request"/>
+                    <TextArea id="message-input" name="message" placeholder="E.g. Details about your service request" required/>
                   </InputContainer>
                 </Column>
               </TwoColumn>
 
-              <SubmitButton type="submit" value="Submit">Submit</SubmitButton>
+              <SubmitButton id="awsSubmit" type="submit" value="Submit">Submit</SubmitButton>
             </form>
           </div>
         </FormContainer>

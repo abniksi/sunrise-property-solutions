@@ -4,10 +4,8 @@ import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { SectionDescription } from "components/misc/Typography.js";
-// import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
-// // import { Container, ContentWithPaddingXl } from "components/misc/Layouts.js";
-// import { ReactComponent as SvgDecoratorBlob1 } from "images/svg-decorator-blob-6.svg";
-// import { ReactComponent as SvgDecoratorBlob2 } from "images/svg-decorator-blob-7.svg";
+
+import SupportIconImage from "../../images/support-icon.svg";
 
 const Container = tw.div`relative bg-blue-100`;
 const HeaderContainer = tw.div`w-full flex flex-col items-center`;
@@ -88,17 +86,31 @@ export default ({
 }) => {
   const defaultPlans = [
     {
-      name: "Home Watch Package",
-      durationPrices: ["$0", "$0"],
-      mainFeature: "For Personal Blogs",
-      features: ["30 Templates", "7 Landing Pages", "12 Internal Pages", "Basic Assistance", "Something Else"]
+      name: "Home Watch Membership",
+      mainFeature:`No more worrying about your
+      property when you are not
+      there.`,
+      features: ["Services Offered: ", "• Interior Property Checks",
+      "• Exterior Property Checks","• Collecting Trash Cans",
+      "• Mail & Package Security","• Coordinating & Overseeing Contractors",
+      "• One Exterior Deep Clean"]
     },
     {
-      name: "Concierge Package",
-      durationPrices: ["$49", "$499"],
-      mainFeature: "Suited for Production Websites",
-      features: ["60 Templates", "8 Landing Pages", "22 Internal Pages", "Priority Assistance", "Lifetime Updates"],
-      featured: true
+      name: "Weekend Get-Away Membership",
+      mainFeature: `Make vacation what it is for
+      by not lifting a finger.`,
+      features: ["Services Offered: ", "• Dock Clean, Organization, & Prep",
+      "• Boat Spot Clean","• Grocery Stocking",
+      "• Pre-Arrival Exterior Clean","• Gas Refill for Fireplace/Grill",
+      "• Post-Trip Interior Spot Clean"]
+    },
+    {
+      name: "All-In-One Membership",
+      mainFeature: `Combine the two to be taken
+      care of all year!`,
+      features: ["Services Offered: ", "• Home Watch Services throughout the year",
+      "• Concierge Services everytime you come to the lake","• One Exterior SpringDeep Clean",
+      "• All for a better value!"]
     }
   ];
 
@@ -117,11 +129,11 @@ export default ({
           {plans.map((plan, index) => (
             <Plan key={index} featured={plan.featured}>
               <PlanHeader>
-                <span className="priceAndDuration">
+                {/* <span className="priceAndDuration">
                   <span className="price">{plan.durationPrices[activeDurationIndex]}</span>
                   <span className="slash"> / </span>
                   <span className="duration">{planDurations[activeDurationIndex].text}</span>
-                </span>
+                </span> */}
                 <span className="name">{plan.name}</span>
                 <span className="mainFeature">{plan.mainFeature}</span>
               </PlanHeader>

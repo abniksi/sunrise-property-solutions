@@ -22,4 +22,8 @@
 
 html {
     scroll-behavior: smooth;
-  }
+}
+
+.mainFeature{
+    padding: 0px 50px;
+}
