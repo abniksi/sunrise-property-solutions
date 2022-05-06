@@ -24,14 +24,6 @@
     white-space: pre-line;
 }
 
-.ewnzgJ {
-    display: none;
-  }
-  
-.ewnzgJ:target {
-    display: block;
-}
-
 html {
     scroll-behavior: smooth;
   }
