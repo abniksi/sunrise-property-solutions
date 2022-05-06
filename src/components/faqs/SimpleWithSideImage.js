@@ -30,7 +30,7 @@ const FAQ = tw.div`cursor-pointer mt-8 select-none border lg:border-0 px-8 py-4 
 const Question = tw.dt`flex justify-between items-center`;
 const QuestionText = tw.span`text-lg lg:text-xl font-semibold`;
 const QuestionToggleIcon = styled.span`
-  ${tw`ml-2 bg-orange-100 text-white p-1 rounded-full group-hover:bg-orange-100 group-hover:text-orange-100 transition duration-300`}
+  ${tw`ml-2 bg-orange-100 text-white p-1 rounded-full group-hover:bg-orange-100 group-hover:text-white transition duration-300`}
   svg {
     ${tw`w-4 h-4`}
   }
