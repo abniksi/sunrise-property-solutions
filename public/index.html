@@ -86,18 +86,29 @@
         }else if(messageEntered.value.length <= 0){
           window.alert('Message cannot be empty. Please put in your request.')
         }else{
-          axios.post('https://cors-anywhere.herokuapp.com/https://nqsby4uhq3.execute-api.us-east-1.amazonaws.com/sendEmailsSunrisePropertySolutions', {
+          axios.all([
+            axios.post(`https://cors-anywhere.herokuapp.com/https://nqsby4uhq3.execute-api.us-east-1.amazonaws.com/sendWorkersContactFormInfo`, {
+                email: emailEntered.value,
+                message: messageEntered.value,
+                phone: phoneEntered.value,
+                name: nameEntered.value
+            },{headers: {
+              ContentType: 'application/json',
+              'Access-Control-Allow-Origin': '*',
+            }}), 
+            axios.post('https://cors-anywhere.herokuapp.com/https://nqsby4uhq3.execute-api.us-east-1.amazonaws.com/sendEmailsSunrisePropertySolutions', {
               email: emailEntered.value,
               message: messageEntered.value,
               phone: phoneEntered.value,
               name: nameEntered.value
-          },
-          {
+            },
+            {
               headers: {
                   ContentType: 'application/json',
                   'Access-Control-Allow-Origin': '*',
               }
-          })
+            })
+          ])
           .then(res => {
             messageEntered.value = '';
             emailEntered.value = '';
@@ -107,8 +118,7 @@
           })
           .catch(err => {
             window.alert("Something went wrong and we did not recieve your request. Please try again or text/call (309)530-6861.");
-          })
-      }
+          })};
 
       const form = document.getElementById("awsForm");
       function handleForm(event) { event.preventDefault(); } 
