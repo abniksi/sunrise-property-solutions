@@ -67,10 +67,12 @@
       const emailEntered  = document.querySelector('#email-input')
       const phoneEntered = document.querySelector('#phone-input')
       const messageEntered = document.querySelector('#message-input')
-    
+      let preventButtonClicking = 0;
 
       submit.onclick = () => {
-
+        if(preventButtonClicking === 0){
+        preventButtonClicking = 1;
+        
         let emailValidation = validator.isEmail(emailEntered.value);
         let phoneValidation = validator.isNumeric(phoneEntered.value);
         let nameValidation = validator.isAlpha(nameEntered.value.replace(/ /g, ""));
@@ -87,26 +89,17 @@
           window.alert('Message cannot be empty. Please put in your request.')
         }else{
           axios.all([
-            axios.post(`https://cors-anywhere.herokuapp.com/https://nqsby4uhq3.execute-api.us-east-1.amazonaws.com/sendWorkersContactFormInfo`, {
+            axios.post('https://nqsby4uhq3.execute-api.us-east-1.amazonaws.com/sendWorkersContactFormInfo', {
                 email: emailEntered.value,
                 message: messageEntered.value,
                 phone: phoneEntered.value,
                 name: nameEntered.value
-            },{headers: {
-              ContentType: 'application/json',
-              'Access-Control-Allow-Origin': '*',
-            }}), 
-            axios.post('https://cors-anywhere.herokuapp.com/https://nqsby4uhq3.execute-api.us-east-1.amazonaws.com/sendEmailsSunrisePropertySolutions', {
+            }), 
+            axios.post('https://nqsby4uhq3.execute-api.us-east-1.amazonaws.com/sendEmailsSunrisePropertySolutions', {
               email: emailEntered.value,
               message: messageEntered.value,
               phone: phoneEntered.value,
               name: nameEntered.value
-            },
-            {
-              headers: {
-                  ContentType: 'application/json',
-                  'Access-Control-Allow-Origin': '*',
-              }
             })
           ])
           .then(res => {
@@ -115,14 +108,16 @@
             phoneEntered.value = '';
             nameEntered.value = '';
             window.alert("We recieved your request! You will get a confirmation email.");
+            preventButtonClicking = 0;
           })
           .catch(err => {
             window.alert("Something went wrong and we did not recieve your request. Please try again or text/call (309)530-6861.");
+            preventButtonClicking = 0;
           })};
-
-      const form = document.getElementById("awsForm");
-      function handleForm(event) { event.preventDefault(); } 
-      form.addEventListener('submit', handleForm);
     }
+    const form = document.getElementById("awsForm");
+    function handleForm(event) { event.preventDefault(); } 
+    form.addEventListener('submit', handleForm);
+  }
   </script>
 </html>
