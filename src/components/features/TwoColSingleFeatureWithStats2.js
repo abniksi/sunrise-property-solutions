@@ -46,7 +46,7 @@ export default ({
       We provide home watching, concierge, and additional services <wbr /> with <span tw="text-orange-100">care.</span>
     </>
   ),
-  description = "We provide peace of mind to second homeowners while they are away. We offer routine checkups for your property, collecting packages and mail, coordinating services, and more. We customize plans for clients to best suit your living situation. SPS can prepare the house for a fun-filled vacation so you can enjoy more lake time. Prepping the dock, making that time-consuming grocery store run, and cleaning up to conclude the trip are things in the past. If you need your seasonal pressure washing done, we can take care of that as well. Cleaning the yard or cleaning the boat can be taken with one phone call.",
+  description = `We are your go-to guys who take special care of your lake home year-round. We offer routine checkups for your property, pressure washing, concierge services, and more. We customize plans for clients to best suit your living situation. SPS can prepare the house for a fun-filled vacation so you can enjoy more lake time by prepping the dock, making that time-consuming grocery store run, knocking out your seasonal exterior clean and cleaning up your yard. Our difference is giving you the ease of only having to call us to take care of the wide range of projects you need done.`,
   primaryButtonText = "Learn Our Story",
   primaryButtonUrl = "#ourStory",
   imageSrc = StatsIllustrationSrc,
