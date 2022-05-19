@@ -70,7 +70,7 @@ const PlanFeatures = styled.div`
 export default ({
   subheading = "",
   heading = "Membership and Packages",
-  description = "Become an SPS member when you sign up for any service! Anything else you want done, we will take 15% off the original price.",
+  description = "Become an SPS member to take advantage of discounted services year-round. Sign up for one of these packages below to become a member!",
   plans = null,
   primaryButtonText = "Buy Now",
   planDurations = [
@@ -86,7 +86,7 @@ export default ({
 }) => {
   const defaultPlans = [
     {
-      name: "Home Watch Membership",
+      name: "Home Watch Package",
       mainFeature:`No more worrying about your
       property when you are not
       there.`,
@@ -96,8 +96,8 @@ export default ({
       "• One Exterior Deep Clean"]
     },
     {
-      name: "Weekend Get-Away Membership",
-      mainFeature: `Make vacation what it is for
+      name: "Weekend Get-Away Package",
+      mainFeature: `Make vacation for what it is
       by not lifting a finger.`,
       features: ["Services Offered: ", "• Dock Clean, Organization, & Prep",
       "• Boat Spot Clean","• Grocery Stocking",
@@ -105,7 +105,7 @@ export default ({
       "• Post-Trip Interior Spot Clean"]
     },
     {
-      name: "All-In-One Membership",
+      name: "All-In-One Package",
       mainFeature: `Combine the two to be taken
       care of all year!`,
       features: ["Services Offered: ", "• Home Watch Services throughout the year",
